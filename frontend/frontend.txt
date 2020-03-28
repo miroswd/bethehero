@@ -1,0 +1,11 @@
+// Commands
+>>> npx create-react-app my-app
+>>> npm i react-icons
+
+# rotas
+
+>>> npm i react-router-dom
+
+# Conectando API
+
+>>> npm i axios

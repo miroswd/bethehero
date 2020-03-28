@@ -1,0 +1,112 @@
+// Commands
+
+>>> npm init -y
+>>> npm i express    # microframework
+>>> npm i nodemon -D # restarta o servidor
+>>> npm i knex       # query builder
+>>> npm i sqlite3
+
+>>> npx knex init  # npx executa um pacote, ao invés de instalar como o npm
+
+
+// Criando migrations
+
+>>> npx knex migrate:make create_ongs # poderia ser qualquer nome, mas para facilitar a compreensão
+>>> npx knex migrate: latest # criar a tabela 
+
+>>> npx knex migrate:rollback # desfaz
+
+
+// CORS - Quem vai poder acessar a aplicação
+
+>>> npm i cors
+
+/////
+
+# Rotas
+  // necessário informar um caminho - chamado de recurso
+  // o recurso que a gente quer acessar
+  // /users -> quero acessar o recurso de users
+
+# Métodos HTTP
+  // acessando através de um método
+  
+  GET: Buscar informação do back-end // padrão de busca do navegador
+  POST: Criar uma informação no back-end
+  PUT: Alterar uma informação no back-end
+  DELETE: Deletar uma informação no back-end
+
+  /// É possível criar através tudo com get, mas com limitações
+
+# Insomnia 
+  // Software para testar outros métodos HTTP
+
+# Tipos de parâmetro
+  // Query Params:
+    - parâmetros nomeados enviados na rota após "?" (/users?name=miro)
+    - normalmente utilizado para filtros, paginação
+  
+  // Route Params:
+    - parâmetros para identificar recursos (/users/:id)
+
+  // Request Body:
+    - corpo da requisição
+    - utilizado para criar/alterar recursos
+
+
+request  >> armazena os dados que vem através da requisição
+response >> responsável por retornar uma resposta ao usuário
+
+
+//////////////////////////////
+======= BANCO DE DADOS =======
+//////////////////////////////
+
+# SQL - MySQL, PostgreSQL, SQLite
+ // Formato para se comunicar com o banco de dados, buscar dados, escrever, etc
+ // Permite ter um controle melhor da estrutura de dado
+
+
+# NoSQL - MongoDB, CouchDB
+  // Não relacionais
+  // Sem uma estrutura fixa
+
+
+// Para fazer a comunicação do banco de dados
+  - Driver: SELECT * FROM users
+  - Query Builder: table('users').select('*').where() // com js
+      Knex.js
+  - 
+
+
+
+///// Aplicação /////
+
+# Entidades 
+  - algo que vai ser salvo no banco de dados
+  - ong, casos
+
+# Funcionalidades
+  - Login de ong
+  - Logout da ong
+  - Cadastro de ong
+  - Cadastrar novos casos
+  - Listar todos os casos
+  - Listar casos específicos de uma ong
+  - Deletar casos
+  - Entrar em contato com a ong
+
+
+# Criar tabelas no DB
+  - migrations -> Forma de criar tabelas e manter um histórico de modificações
+
+
+# Validação
+>>> npm i celebrate
+
+
+# testes
+>>> npm i jest -D
+>>> npx jest --init
+>>> npm i cross-env
+>>> npm i supertest -D # teste com api

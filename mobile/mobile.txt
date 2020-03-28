@@ -1,0 +1,21 @@
+# Comandos
+
+>>> npm i -g expo-cli # instala o expo
+>>> expo init nome_projeto # cria o projeto react native
+
+# iniciando
+>>> yarn start # inicia o projeto
+
+# getting started
+https://reactnavigation.org/docs/getting-started
+
+>>> expo install expo-constants
+
+# email
+>>> expo install expo-mail-composer
+
+# whatsapp
+// deep linking -> abre qualquer aplicativo
+
+>>> npm i axios
+>>> npm i intl
